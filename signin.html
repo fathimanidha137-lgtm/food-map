@@ -11,37 +11,59 @@
       href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
       rel="stylesheet"
     />
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let signinBtn = document.querySelector("#signinBtn");
-
-        console.log("signinBtn:", signinBtn);
-
-        if (signinBtn) {
-          signinBtn.addEventListener("click", function () {
-            window.location.href = "register.html";
-          });
-        }
-      });
-    </script>
   </head>
   <body>
     <div class="container">
       <h2>LOGIN</h2>
 
       <form id="loginForm">
-        <input type="email" placeholder="Enter Email" required />
-        <input type="password" placeholder="Enter Password" required />
+        <input type="email" id="loginEmail" placeholder="Enter Email" required />
+        <input type="password" id="loginPassword" placeholder="Enter Password" required />
 
-        <button type="submit" class="registerBtn">login</button>
+        <button type="submit" class="registerBtn">Login</button>
       </form>
       <div class="signin-box">
         <p>Don't have an account?</p>
-        <button class="signinBtn" id="signinBtn">Register</button>
+        <button class="signinBtn" id="registerBtn">Register</button>
       </div>
     </div>
 
-    <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+    const registerBtn = document.getElementById("registerBtn");
+
+    // Redirect to registration page
+    registerBtn.addEventListener("click", () => {
+      window.location.href = "register.html";
+    });
+
+    // Handle login form submission
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value;
+
+      // Get user from localStorage
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+
+      if (!storedUser) {
+        alert("No registered user found. Please register first.");
+        return;
+      }
+
+      // Check credentials
+      if (email === storedUser.email && password === storedUser.password) {
+        alert(`Welcome back, ${storedUser.name}!`);
+        // Redirect to index.html after successful login
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid email or password. Please try again.");
+      }
+    });
+  });
+</script>
+
   </body>
 </html>

@@ -11,37 +11,57 @@
       href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
       rel="stylesheet"
     />
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let signupBtn = document.querySelector("#signupBtn");
-
-        console.log("signupBtn:", signupBtn);
-
-        if (signupBtn) {
-          signupBtn.addEventListener("click", function () {
-            window.location.href = "signin.html";
-          });
-        }
-      });
-    </script>
   </head>
   <body>
     <div class="container">
       <h2>SIGN UP</h2>
 
       <form id="registerForm">
-        <input type="text" placeholder="Enter Name" required />
-        <input type="email" placeholder="Enter Email" required />
-        <input type="password" placeholder="Enter Password" required />
+        <input type="text" id="name" placeholder="Enter Name" required />
+        <input type="email" id="email" placeholder="Enter Email" required />
+        <input type="password" id="password" placeholder="Enter Password" required />
 
         <button type="submit" class="registerBtn">Register</button>
       </form>
       <div class="signin-box">
         <p>Already have an account?</p>
-        <button class=" signinBtn" id="signupBtn">Login</button>
+        <button class="signinBtn" id="loginBtn">Login</button>
       </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registerForm = document.getElementById("registerForm");
+        const loginBtn = document.getElementById("loginBtn");
+
+        // Redirect to login page when clicking "Login" button
+        if (loginBtn) {
+          loginBtn.addEventListener("click", () => {
+            window.location.href = "signin.html";
+          });
+        }
+
+        // Handle registration form submission
+        registerForm.addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent form from submitting normally
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+
+          if (!name || !email || !password) {
+            alert("Please fill in all fields!");
+            return;
+          }
+
+          // Save user data in localStorage
+          const user = { name, email, password };
+          localStorage.setItem("user", JSON.stringify(user));
+
+          alert("Registration successful! Redirecting to login...");
+          window.location.href = "signin.html"; // Redirect to login page
+        });
+      });
+    </script>
   </body>
 </html>
