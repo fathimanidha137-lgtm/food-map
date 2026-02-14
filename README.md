@@ -19,10 +19,10 @@ https://fathimanidha137-lgtm.github.io/food-map/
 helps to find good foods when we travel,
 
 ### The Problem statement
-[What problem are you solving?]
+[ to find good food spots while traveling]
 
 ### The Solution
-[How are you solving it?]
+[A website to find good food spots while traveling]
 
 ---
 
@@ -31,8 +31,8 @@ helps to find good foods when we travel,
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript]
-- Tools used: [e.g., VS Code, Git,]
+- Languages used: [HTML,CSS,JAVASCRIPT]
+- Tools used: [ VS Code, Git,CHAT GPT,LEAF LET]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -44,10 +44,10 @@ helps to find good foods when we travel,
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [A web platform that helps users discover great food spots when traveling or exploring new places.
+All locations are manually curated to provide genuine and trustworthy recommendations.
+Find real local food gems easily, without relying on automated listings.]
+
 
 ---
 
@@ -81,13 +81,13 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
+![Screenshot1](img1.png)
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![Screenshot2](img2.png)
 *Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![Screenshot3](img3.png)
 *Add caption explaining what this shows*
 
 #### Diagrams
