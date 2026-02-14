@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Travel Food Spot Finder</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<h1>🍽 Travel Food Spot Finder</h1>
+
+<div class="search-box">
+<input type="text" id="placeInput" placeholder="Search a place..." />
+<button onclick="searchPlace()">Search</button>
+<button onclick="getMyLocation()">Use My Location</button>
+
+<br><br>
+
+<button onclick="toggleFilter()">Filter Food Type</button>
+
+<div id="filterBox" class="filter-box">
+<select id="foodFilter" onchange="applyFilter()">
+<option value="all">All</option>
+<option value="veg">Veg</option>
+<option value="nonveg">Non-Veg</option>
+<option value="cafe">Cafe</option>
+</select>
+</div>
+
+</div>
+
+<p>📍 Click anywhere on the map to add food spot!</p>
+
+<div id="map"></div>
+
+<h2>Nearby Food Spots (5 km)</h2>
+<ul id="results"></ul>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let signinBtn = document.querySelector("#signinBtn");
+
+        console.log("signinBtn:", signinBtn);
+
+        if (signinBtn) {
+          signinBtn.addEventListener("click", function () {
+            window.location.href = "register.html";
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>LOGIN</h2>
+
+      <form id="loginForm">
+        <input type="email" placeholder="Enter Email" required />
+        <input type="password" placeholder="Enter Password" required />
+
+        <button type="submit" class="registerBtn">login</button>
+      </form>
+      <div class="signin-box">
+        <p>Don't have an account?</p>
+        <button class="signinBtn" id="signinBtn">Register</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
