@@ -2,21 +2,21 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# Food Map 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: Blueprint
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Fathima Nidha- EMEA College of Arts and Science, Kondotty
+- Member 2: Fathima Mitha-  EMEA College of Arts and Science, Kondotty
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://fathimanidha137-lgtm.github.io/food-map/
 
 ### Project Description
-[2-3 lines about what your project does]
+helps to find good foods when we travel,
 
 ### The Problem statement
 [What problem are you solving?]
@@ -31,10 +31,8 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [e.g., JavaScript]
+- Tools used: [e.g., VS Code, Git,]
 
 **For Hardware:**
 - Main components: [List main components]
